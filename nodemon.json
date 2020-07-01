@@ -1,0 +1,11 @@
+{
+  "ignore": [
+    "src/*",
+    "node_modules/*"
+  ],
+  "watch": [
+    "server/*",
+    "db/*"
+  ],
+  "ext": "js,sql"
+}

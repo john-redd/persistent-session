@@ -1,0 +1,79 @@
+.login-main-container {
+  width: 100%;
+  height: 100vh;
+
+  background-image: url('https://images.unsplash.com/photo-1591813939949-7edcc1559418?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form-container {
+  width: 40%;
+  height: 40vh;
+  background-color: rgb(209, 209, 209);
+
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.login-form-item {
+  width: 80%;
+
+  margin-bottom: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form-label {
+  display: inline-block;
+  text-align: right;
+  width: 7vw;
+  padding: 8px;
+}
+
+.login-form-input {
+  width: 60%;
+  padding: 4px;
+}
+
+.button-container {
+  width: 80%;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.button {
+  /* height: fit-content; */
+  /* max-width: 8px; */
+  padding: 8px 16px;
+
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.login-error-message {
+  margin-top: 32px;
+}
+
+.loading-container {
+  height: 100px;
+  width: 100px;
+  
+  position: absolute;
+  bottom: 32px;
+}

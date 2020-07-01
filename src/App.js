@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import './reset.css';
+import Login from './components/Login/Login'
+import { connect } from 'react-redux'
+import { updateUser } from './redux/reducers/user'
+import axios from 'axios'
 
-function App() {
+function App(props) {
+  useEffect(() => {
+    axios.get('/auth/getUser')
+    .then(res => {
+      props.updateUser(res.data)
+    })
+    .catch(err => console.log(err))
+  }, [])
+  // !This should show a console.log of what is currently in the redux store.
+  console.log(props)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Login />
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = reduxState => reduxState;
+
+export default connect(mapStateToProps, { updateUser })(App);
